@@ -120,7 +120,7 @@ nav .menu ul{
     display: none;
 }
 /* Mostra Menu */
-nav .show .menu{
+nav.show .menu{
     opacity: 1;
     visibility: visible;
     background: var(--body-color);
@@ -132,7 +132,7 @@ nav .show .menu{
     display: grid;
     place-content: center;
 }
-nav .show ul .grid{
+nav.show ul.grid{
     display: grid;
     gap: 4rem;
 }
@@ -150,8 +150,36 @@ nav .icon-close{
     right: 1.5rem;
     transition: 0.2s;
 }
-nav .show div .icon-close{
+nav.show div.icon-close{
     visibility: visible;
     opacity: 1;
     top: 1.5rem;
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Navegação */
+    nav .menu{
+        opacity: 1;
+        visibility: visible;
+        top: 0;
+    }
+    nav .menu ul{
+        display: flex;
+        gap: 2rem;
+    }
+    nav .menu ul li a.title{
+        font: 400 1rem var(--body-font);
+        -webkit-font-smoothing: antialiased
+    }
+    nav .menu ul li a.title.active{
+        font-weight: bold;
+        -webkit-font-smoothing: auto;
+    }
+    nav .icon-menu{
+        display: none;
+    }
 }
